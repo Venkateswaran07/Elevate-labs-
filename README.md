@@ -1,10 +1,13 @@
-# Elevate Labs Task 1
+# Web Development Internship Task
 
-This repository contains the source code for Task 1: Personal Profile Page.
+This project contains the solution for the Web Development Internship task.
 
-## Index Task 1
+## Project Structure
+- `index.html`: The main HTML document containing the semantic structure.
+- `style.css`: The stylesheet demonstrating CSS box model and styling.
 
-Below are the preview images for Index Task 1:
+## Screenshots
 
-![Index Task 1 Preview 1](index_task_1_1.png)
-![Index Task 1 Preview 2](index_task_1_2.png)
+![Screenshot 1](screenshot_1.png)
+
+![Screenshot 2](screenshot_2.png)
