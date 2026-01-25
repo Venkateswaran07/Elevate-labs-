@@ -1,16 +1,24 @@
-# Web Development Internship Task 3: Flexbox Layout
+# Web Development Internship Task 4: Simple Multi-Page Website
 
-This project contains the solution for Task 3, which involves creating a responsive layout using CSS Flexbox.
+This project contains the solution for Task 4, which involves creating a simple multi-page website with valid navigation.
 
 ## Features
 
-- **Responsive Navigation**: The navigation bar adapts to screen size using `flex-wrap`.
-- **Flexbox Card Layout**: Projects and Internships are displayed in a responsive grid-like layout using `flex` properties.
-- **Skills Badges**: Technical skills are styled as pill-shaped badges using Flexbox.
-- **Semantic HTML**: The structure remains semantic without divs replacing key elements.
+- **Multi-Page Structure**: Created `index.html` (Home), `about.html`, and `contact.html`.
+- **Navigation**: Consistent navigation bar across all pages with an `.active` class highlighting the current page.
+- **Semantic HTML**: Continued use of semantic tags for structure.
+- **Shared Styling**: Single `style.css` file managing the look and feel of all pages.
 
 ## Screenshots
 
-![Task 3 Screenshot 1](task_3_screenshot_1.png)
+### Home Page
 
-![Task 3 Screenshot 2](task_3_screenshot_2.png)
+![Home Page](task_4_screenshot_3.png)
+
+### About Page
+
+![About Page](task_4_screenshot_1.png)
+
+### Contact Page
+
+![Contact Page](task_4_screenshot_2.png)
