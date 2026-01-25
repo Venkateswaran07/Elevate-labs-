@@ -1,75 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Venkateswaran A - Personal Profile</title>
+    <meta name="description" content="Portfolio of Venkateswaran A - Aspiring Software Developer">
+    <title>Venkateswaran A | Web Development Internship Task</title>
+    <!-- Linking external CSS file as required -->
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-
-    <!-- Using <header> instead of <div> because it clearly defines the top section of the page -->
-    <header>
-        <h1>Venkateswaran A</h1>
-        <p>Aspiring Software Developer | Computer Science Engineering Student</p>
-
-        <!-- Profile Image with alt attribute for accessibility -->
-        <img src="profile.jpg" alt="Profile picture of Venkateswaran A" width="150">
+    <!-- 
+        Header: Contains introductory content and navigation.
+        Semantic Requirement: <header> is used for the top section of the page/section.
+    -->
+    <header class="main-header">
+        <div class="header-content">
+            <h1>Venkateswaran A</h1>
+            <p class="role">Aspiring Software Developer | Computer Science Engineering Student</p>
+        </div>
+        <!-- 
+            Nav: Contains navigation links.
+            Semantic Requirement: <nav> is used for major navigation blocks.
+        -->
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#internships">Internships</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <!-- Using <nav> for navigation links helps screen readers identify the menu -->
-    <nav>
-        <h2>Navigation</h2>
-        <ul>
-            <li><a href="#about">About Me</a></li>
-            <li><a href="#education">Education</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#internships">Internships</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
-
-    <!-- Main profile content starts -->
+    <!-- 
+        Main: Contains the central content of the document.
+        Semantic Requirement: <main> is used for the dominant content of the <body>.
+    -->
     <main>
-
-        <!-- Using <section> to group related content -->
-        <section id="about">
+        <!-- 
+            Section: Defines a thematic grouping of content.
+            Semantic Requirement: <section> is used for distinct sections like About, Education, etc.
+        -->
+        <section id="about" class="content-section">
             <h2>About Me</h2>
-
-            <!-- Using <article> to contain a self-contained piece of content -->
+            <!-- 
+                Article: Represents a self-contained composition.
+                Semantic Requirement: <article> is used here for the content block.
+            -->
             <article>
-                <p>
-                    Hello! I am Venkateswaran A, an aspiring software developer with a strong foundation
-                    in C and Java, and a growing interest in web technologies. I am passionate about
-                    problem-solving, continuous learning, and building efficient, scalable solutions
-                    that add real-world value.
-                </p>
+                <p>Aspiring software developer with a strong foundation in C and Java, and a growing interest in web technologies. Passionate about problem-solving, continuous learning, and building efficient, scalable solutions.</p>
             </article>
         </section>
 
-        <section id="education">
+        <section id="education" class="content-section">
             <h2>Education</h2>
-
-            <article>
-                <h3>B.E. Computer Science and Engineering</h3>
-                <p>Easwari Engineering College, Ramapuram</p>
-                <p>Year: 2024 – 2028 | CGPA: 8.5</p>
+            <article class="info-card">
+                <h3>B.E Computer Science and Engineering</h3>
+                <p class="institution">Easwari Engineering College, Ramapuram</p>
+                <p class="duration">2024–2028 | CGPA: 8.5</p>
             </article>
-
-            <article>
+            <article class="info-card">
                 <h3>SSLC</h3>
-                <p>Don Bosco Higher Secondary School, Karaikal</p>
-                <p>Percentage: 78%</p>
+                <p class="institution">Don Bosco Higher Secondary School, Karaikal</p>
+                <p class="grade">Percentage: 78%</p>
             </article>
         </section>
 
-        <section id="skills">
+        <section id="skills" class="content-section">
             <h2>Technical Skills</h2>
-
-            <!-- Using <ul> and <li> for listing skills clearly -->
-            <ul>
+            <ul class="skills-list">
                 <li>HTML5 & CSS</li>
                 <li>C Programming</li>
                 <li>Python</li>
@@ -79,58 +80,47 @@
             </ul>
         </section>
 
-        <section id="internships">
+        <section id="internships" class="content-section">
             <h2>Internships</h2>
-
-            <article>
-                <p><strong>Zidio – Web Development Intern</strong></p>
-                <p>Bengaluru | Aug 2025 – Sep 2025</p>
+            <article class="info-card">
+                <h3>Zidio – Web Development Intern</h3>
+                <p class="duration">Aug 2025 – Sep 2025</p>
             </article>
-
-            <article>
-                <p><strong>1M1B – Green Internship</strong></p>
-                <p>Bengaluru | Nov 2025 – Dec 2025</p>
+            <article class="info-card">
+                <h3>1M1B – Green Internship</h3>
+                <p class="duration">Nov 2025 – Dec 2025</p>
             </article>
         </section>
 
-        <section id="projects">
+        <section id="projects" class="content-section">
             <h2>Projects</h2>
-
-            <ul>
-                <li>Blockchain-based Carbon Emission Tracking System</li>
-                <li>MERN-based Excel Data Analysis Application</li>
-                <li>Hotel Management System</li>
-            </ul>
+            <div class="project-list">
+                <article class="project-card">
+                    <h3>Blockchain-based Carbon Emission Tracking System</h3>
+                </article>
+                <article class="project-card">
+                    <h3>MERN-based Excel Data Analysis Application</h3>
+                </article>
+                <article class="project-card">
+                    <h3>Hotel Management System</h3>
+                </article>
+            </div>
         </section>
-
-        <section id="contact">
-            <h2>Contact Details</h2>
-
-            <article>
-                <p>Email: <a href="mailto:venkateseecgmail.com">venkateseecgmail.com</a></p>
-                <p>Phone: 7826034923</p>
-                <p>
-                    LinkedIn:
-                    <a href="https://www.linkedin.com/in/venkateswaran-a-28b762328/" target="_blank">
-                        Venkateswaran A
-                    </a>
-                </p>
-                <p>
-                    GitHub:
-                    <a href="https://github.com/Venkateswaran07" target="_blank">
-                        github.com/Venkateswaran07
-                    </a>
-                </p>
-            </article>
-        </section>
-
     </main>
 
-    <!-- Using <footer> for the ending part of the webpage -->
-    <footer>
-        <p>&copy; 2026 Venkateswaran A. All rights reserved.</p>
+    <!-- 
+        Footer: Contains footer information like contact details.
+        Semantic Requirement: <footer> is used for the bottom section of the document.
+    -->
+    <footer id="contact" class="main-footer">
+        <h2>Contact</h2>
+        <address>
+            <p>Phone: 7826034923</p>
+            <!-- Assuming typo in email address from prompt 'venkateseecgmail.com', kept exact text but added mailto for usability if possible, strictly following prompt text though -->
+            <p>Email: <a href="mailto:venkateseec@gmail.com">venkateseecgmail.com</a></p>
+            <p>LinkedIn: <a href="https://www.linkedin.com/in/venkateswaran-a-28b762328/" target="_blank">https://www.linkedin.com/in/venkateswaran-a-28b762328/</a></p>
+            <p>GitHub: <a href="https://github.com/Venkateswaran07" target="_blank">https://github.com/Venkateswaran07</a></p>
+        </address>
     </footer>
-
 </body>
-
 </html>
