@@ -1,24 +1,24 @@
-# Web Development Internship Task 4: Simple Multi-Page Website
+# Web Development Internship Task 5: Contact Form with HTML Validation
 
-This project contains the solution for Task 4, which involves creating a simple multi-page website with valid navigation.
+This project contains the solution for Task 5, which involves adding a fully validated contact form to the multi-page website.
 
 ## Features
 
-- **Multi-Page Structure**: Created `index.html` (Home), `about.html`, and `contact.html`.
-- **Navigation**: Consistent navigation bar across all pages with an `.active` class highlighting the current page.
-- **Semantic HTML**: Continued use of semantic tags for structure.
-- **Shared Styling**: Single `style.css` file managing the look and feel of all pages.
+- **Contact Form**: Integrated into `contact.html` with fields for Name, Email, Phone, and Message.
+- **HTML5 Validation**:
+  - `required` attributes on all fields.
+  - `type="email"` for email validation.
+  - `pattern="[0-9]{10}"` for strict 10-digit phone number validation.
+  - `maxlength` constraints on Name (30) and Message (200).
+- **Responsive Styling**: Form elements are styled with Flexbox and standard box-model properties to look good on all devices.
+- **Accessibility**: All inputs have associated `<label>` tags.
 
 ## Screenshots
 
-### Home Page
+### Contact Form UI
 
-![Home Page](task_4_screenshot_3.png)
+![Contact Form](task_5_screenshot_1.png)
 
-### About Page
+### Contact Page Overview
 
-![About Page](task_4_screenshot_1.png)
-
-### Contact Page
-
-![Contact Page](task_4_screenshot_2.png)
+![Contact Page](task_5_screenshot_2.png)

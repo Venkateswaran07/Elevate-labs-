@@ -55,33 +55,10 @@ nav ul {
     list-style: none;
     padding: 0;
     margin: 0;
-
-    /* 
-        display: flex
-        Enables the flexbox layout model for the list. 
-        Items become flex items and align horizontally by default.
-    */
     display: flex;
-
-    /* 
-        justify-content: center
-        Aligns the flex items (links) to the center of the container main axis.
-    */
     justify-content: center;
-
-    /* 
-        align-items: center
-        Aligns items vertically along the cross axis.
-    */
     align-items: center;
-
-    /* 
-        flex-wrap: wrap
-        Allows the navigation items to wrap onto a new line if the screen size is too small.
-    */
     flex-wrap: wrap;
-
-    /* GAP provides spacing between flex items */
     gap: 1.5rem;
 }
 
@@ -101,7 +78,6 @@ nav a:hover {
 /* 
     Active Navigation Link
     Requirement: Highlight the ACTIVE navigation link using CSS.
-    This class is added to the link corresponding to the current page.
 */
 nav a.active {
     color: #3498db;
@@ -145,22 +121,8 @@ h2 {
     Used for Projects and Internships sections.
 */
 .card-list {
-    /* 
-        display: flex
-        Turns the container into a flex container parent.
-    */
     display: flex;
-
-    /* 
-        flex-wrap: wrap
-        Ensures cards move to the next "row" when there isn't enough space on one line.
-    */
     flex-wrap: wrap;
-
-    /* 
-        gap
-        Creates standardized spacing between flex items (cards).
-    */
     gap: 1.5rem;
 }
 
@@ -175,11 +137,6 @@ h2 {
     border-left: 4px solid #3498db;
     border-radius: 4px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-
-    /* 
-        flex: 1 1 300px
-        Grow: 1, Shrink: 1, Basis: 300px
-    */
     flex: 1 1 300px;
 }
 
@@ -238,4 +195,79 @@ h2 {
 address {
     font-style: normal;
     line-height: 1.8;
+}
+
+/* 
+    CONTACT FORM STYLING
+    Task 5 Requirement: Style the form using box model.
+*/
+.contact-form {
+    max-width: 100%;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+    /* Margin for spacing between inputs */
+}
+
+label {
+    display: block;
+    /* Ensures label takes its own line */
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: #34495e;
+}
+
+/* 
+    Input and Textarea Styling
+    Applying consistent padding and borders
+*/
+input,
+textarea {
+    width: 100%;
+    /* Responsive width */
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: inherit;
+    /* Inherit font from body */
+    font-size: 1rem;
+    background-color: #fafafa;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+/* Focus state for better accessibility and UX */
+input:focus,
+textarea:focus {
+    border-color: #3498db;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+}
+
+/* Helper text styling */
+small {
+    color: #7f8c8d;
+    font-size: 0.85rem;
+    margin-top: 0.4rem;
+    display: block;
+}
+
+/* 
+    Submit Button Styling
+*/
+.submit-btn {
+    background-color: #3498db;
+    color: white;
+    padding: 0.8rem 2rem;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: inline-block;
+}
+
+.submit-btn:hover {
+    background-color: #2980b9;
 }
