@@ -1,10 +1,24 @@
-# Elevate Labs Task 1
+# Web Development Internship Task 4: Simple Multi-Page Website
 
-This repository contains the source code for Task 1: Personal Profile Page.
+This project contains the solution for Task 4, which involves creating a simple multi-page website with valid navigation.
 
-## Index Task 1
+## Features
 
-Below are the preview images for Index Task 1:
+- **Multi-Page Structure**: Created `index.html` (Home), `about.html`, and `contact.html`.
+- **Navigation**: Consistent navigation bar across all pages with an `.active` class highlighting the current page.
+- **Semantic HTML**: Continued use of semantic tags for structure.
+- **Shared Styling**: Single `style.css` file managing the look and feel of all pages.
 
-![Index Task 1 Preview 1](index_task_1_1.png)
-![Index Task 1 Preview 2](index_task_1_2.png)
+## Screenshots
+
+### Home Page
+
+![Home Page](task_4_screenshot_3.png)
+
+### About Page
+
+![About Page](task_4_screenshot_1.png)
+
+### Contact Page
+
+![Contact Page](task_4_screenshot_2.png)
