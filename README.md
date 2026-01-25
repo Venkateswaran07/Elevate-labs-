@@ -1,10 +1,16 @@
-# Elevate Labs Task 1
+# Web Development Internship Task 3: Flexbox Layout
 
-This repository contains the source code for Task 1: Personal Profile Page.
+This project contains the solution for Task 3, which involves creating a responsive layout using CSS Flexbox.
 
-## Index Task 1
+## Features
 
-Below are the preview images for Index Task 1:
+- **Responsive Navigation**: The navigation bar adapts to screen size using `flex-wrap`.
+- **Flexbox Card Layout**: Projects and Internships are displayed in a responsive grid-like layout using `flex` properties.
+- **Skills Badges**: Technical skills are styled as pill-shaped badges using Flexbox.
+- **Semantic HTML**: The structure remains semantic without divs replacing key elements.
 
-![Index Task 1 Preview 1](index_task_1_1.png)
-![Index Task 1 Preview 2](index_task_1_2.png)
+## Screenshots
+
+![Task 3 Screenshot 1](task_3_screenshot_1.png)
+
+![Task 3 Screenshot 2](task_3_screenshot_2.png)

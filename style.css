@@ -1,0 +1,239 @@
+/* 
+    Global Box Sizing Rule
+    Requirement: Use box-sizing: border-box.
+*/
+* {
+    box-sizing: border-box;
+}
+
+/* 
+    Global Styles
+    Requirement: Apply global styles.
+*/
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f7f6;
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* 
+    Header Styling
+*/
+.main-header {
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    padding: 2rem 0;
+    text-align: center;
+}
+
+.main-header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+.role {
+    font-size: 1.1rem;
+    font-weight: 300;
+    margin-top: 0.5rem;
+}
+
+/* 
+    Navigation Styling
+    FLEXBOX IMPLEMENTATION
+    Requirement: Make the navigation bar horizontal using Flexbox.
+*/
+nav {
+    margin-top: 1.5rem;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    /* 
+        display: flex
+        Enables the flexbox layout model for the list. 
+        Items become flex items and align horizontally by default.
+    */
+    display: flex;
+
+    /* 
+        justify-content: center
+        Aligns the flex items (links) to the center of the container main axis.
+    */
+    justify-content: center;
+
+    /* 
+        align-items: center
+        Aligns items vertically along the cross axis (useful if items have different heights).
+    */
+    align-items: center;
+
+    /* 
+        flex-wrap: wrap
+        Allows the navigation items to wrap onto a new line if the screen size is too small,
+        ensuring the page is mobile-friendly.
+    */
+    flex-wrap: wrap;
+
+    /* GAP provides spacing between flex items */
+    gap: 1.5rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: #bdc3c7;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #fff;
+}
+
+/* 
+    Main Content Styling
+*/
+main {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+/* 
+    Section Styling
+    Requirement: clear use of the CSS box model.
+*/
+.content-section {
+    background-color: #ffffff;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+h2 {
+    color: #2c3e50;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 0.5rem;
+    margin-top: 0;
+}
+
+/* 
+    FLEXBOX CONTAINER FOR CARDS
+    Used for Projects and Internships sections.
+*/
+.card-list {
+    /* 
+        display: flex
+        Turns the container into a flex container parent.
+    */
+    display: flex;
+
+    /* 
+        flex-wrap: wrap
+        Ensures cards move to the next "row" when there isn't enough space on one line.
+        Crucial for responsiveness.
+    */
+    flex-wrap: wrap;
+
+    /* 
+        gap
+        Creates standardized spacing between flex items (cards) both horizontally and vertically.
+    */
+    gap: 1.5rem;
+}
+
+/* 
+    Card Styling (Internships & Projects)
+    Requirement: Create card-like layouts.
+*/
+.info-card,
+.project-card {
+    background-color: #f9f9f9;
+    padding: 1.5rem;
+    border-left: 4px solid #3498db;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+
+    /* 
+        flex: 1 1 300px
+        flex-grow: 1 (item will grow to fill space)
+        flex-shrink: 1 (item will shrink if needed)
+        flex-basis: 300px (ideal starting size; triggers wrapping on smaller screens)
+    */
+    flex: 1 1 300px;
+}
+
+.info-card h3,
+.project-card h3 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    color: #2980b9;
+}
+
+/* 
+    FLEXBOX IMPLEMENTATION: SKILLS
+    Requirement: Create card-like layouts for Skills.
+*/
+.skills-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+
+    /* Flexbox for the list of skills */
+    display: flex;
+
+    /* Allow wrapping for multiple rows of badges */
+    flex-wrap: wrap;
+
+    /* Space between badges */
+    gap: 1rem;
+}
+
+.skills-list li {
+    background-color: #e8f6f3;
+    color: #16a085;
+    padding: 0.5rem 1rem;
+    border-radius: 25px;
+    /* Pill shape badge */
+    font-weight: 500;
+    border: 1px solid #d1f2eb;
+
+    /* 
+        flex: 0 0 auto
+        grow: 0 (don't stretch)
+        shrink: 0 (don't squish)
+        basis: auto (size based on text content)
+    */
+    flex: 0 0 auto;
+}
+
+/* 
+    Footer Styling
+*/
+.main-footer {
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    text-align: center;
+    padding: 2rem;
+    margin-top: 3rem;
+}
+
+.main-footer a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+.main-footer a:hover {
+    text-decoration: underline;
+}
+
+address {
+    font-style: normal;
+    line-height: 1.8;
+}
