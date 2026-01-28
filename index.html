@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskMaster - Premium To-Do App</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&family=Rajdhani:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <div class="background-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <div class="app-container">
+        <header>
+            <h1>TaskMaster</h1>
+            <p>Focus on what matters.</p>
+        </header>
+
+        <section class="input-group">
+            <div class="input-wrapper">
+                <input type="text" id="taskInput" placeholder="Enter mission objective..." autocomplete="off">
+            </div>
+            <div class="date-wrapper">
+                <input type="datetime-local" id="dateInput" aria-label="Task deadline">
+            </div>
+            <button id="addBtn"><i class="fa-solid fa-plus"></i></button>
+        </section>
+
+        <div class="status-tabs">
+            <button class="tab active" data-filter="all">All</button>
+            <button class="tab" data-filter="active">Active</button>
+            <button class="tab" data-filter="completed">Completed</button>
+        </div>
+
+        <ul id="taskList" class="task-list">
+            <!-- Tasks will be injected here -->
+        </ul>
+
+        <div class="empty-state" id="emptyState">
+            <i class="fa-regular fa-clipboard"></i>
+            <p>No tasks yet. Start by adding one!</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
