@@ -1,0 +1,321 @@
+:root {
+    --primary-color: #d2ea1d;
+    --primary-hover: #e23500;
+    --bg-color: #282a0f;
+    --card-bg: rgba(30, 41, 59, 0.7);
+    --text-color: #f8fafc;
+    --text-muted: #94a3b8;
+    --border-color: #334155;
+    --error-color: #fc008f;
+    --success-color: #00ffff;
+    --input-bg: #1e293b;
+    --focus-ring: rgba(254, 254, 255, 0.5);
+    --font-main: 'Outfit', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-main);
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Dynamic Background */
+.background-animation {
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    top: -50%;
+    left: -50%;
+    background: radial-gradient(circle at 50% 50%, rgba(99, 102, 241, 0.15), transparent 60%),
+        radial-gradient(circle at 80% 20%, rgba(236, 72, 153, 0.15), transparent 50%);
+    z-index: -1;
+    animation: rotate 20s linear infinite;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.container {
+    padding: 2rem;
+    width: 100%;
+    max-width: 500px;
+}
+
+.form-card {
+    background: var(--card-bg);
+    padding: 2.5rem;
+    border-radius: 20px;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transform: translateY(0);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 30px 60px -12px rgba(99, 102, 241, 0.2);
+}
+
+header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+header h1 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    background: linear-gradient(135deg, #fff 0%, #cbd5e1 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+header p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+}
+
+.input-group {
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+    color: var(--text-color);
+    font-weight: 500;
+}
+
+.input-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.input-icon {
+    position: absolute;
+    left: 1rem;
+    color: var(--text-muted);
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+input {
+    width: 100%;
+    padding: 0.85rem 1rem 0.85rem 2.8rem;
+    background-color: var(--input-bg);
+    border: 2px solid var(--border-color);
+    border-radius: 12px;
+    color: var(--text-color);
+    font-family: var(--font-main);
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    outline: none;
+}
+
+input:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 4px var(--focus-ring);
+}
+
+input:focus+.input-icon,
+.input-wrapper:focus-within .input-icon {
+    color: var(--primary-color);
+}
+
+/* Validation States */
+.input-wrapper.success input {
+    border-color: var(--success-color);
+}
+
+.input-wrapper.error input {
+    border-color: var(--error-color);
+    animation: shake 0.4s ease-in-out;
+}
+
+.error-message {
+    color: var(--error-color);
+    font-size: 0.85rem;
+    margin-top: 0.5rem;
+    display: block;
+    min-height: 1.2em;
+    /* Prevent layout shift */
+    opacity: 0;
+    transform: translateY(-5px);
+    transition: all 0.3s ease;
+}
+
+.input-wrapper.error+.error-message {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.status-icon,
+.toggle-password {
+    position: absolute;
+    right: 1rem;
+    cursor: pointer;
+    color: var(--text-muted);
+}
+
+.success-icon,
+.error-icon {
+    position: absolute;
+    right: 1rem;
+    opacity: 0;
+    transform: scale(0.5);
+    transition: all 0.3s ease;
+}
+
+.input-wrapper.success .success-icon {
+    opacity: 1;
+    transform: scale(1);
+    color: var(--success-color);
+}
+
+.input-wrapper.error .error-icon {
+    opacity: 1;
+    transform: scale(1);
+    color: var(--error-color);
+}
+
+.input-wrapper.error .success-icon,
+.input-wrapper.success .error-icon {
+    display: none;
+}
+
+/* Password Toggle specifically */
+.toggle-password {
+    z-index: 10;
+    transition: color 0.3s;
+}
+
+.toggle-password:hover {
+    color: var(--text-color);
+}
+
+/* Password Strength Bar */
+.password-strength {
+    height: 4px;
+    background: #334155;
+    margin-top: 0.5rem;
+    border-radius: 2px;
+    overflow: hidden;
+    width: 100%;
+    margin-bottom: 0px;
+    /* Adjust spacing */
+}
+
+.strength-bar {
+    height: 100%;
+    width: 0;
+    transition: width 0.3s ease, background-color 0.3s ease;
+}
+
+/* Submit Button */
+button {
+    width: 100%;
+    padding: 1rem;
+    background: linear-gradient(135deg, var(--primary-color), var(--primary-hover));
+    border: none;
+    border-radius: 12px;
+    color: rgb(164, 164, 221);
+    font-size: 1rem;
+    font-weight: 600;
+    font-family: var(--font-main);
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.8rem;
+    transition: all 0.3s ease;
+    margin-top: 1rem;
+    box-shadow: 0 4px 6px -1px rgba(99, 102, 241, 0.3);
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 15px -3px rgba(99, 102, 241, 0.4);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+button:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+    background: var(--text-muted);
+}
+
+.login-link {
+    text-align: center;
+    margin-top: 1.5rem;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+.login-link a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.2s;
+}
+
+.login-link a:hover {
+    color: var(--primary-hover);
+    text-decoration: underline;
+}
+
+@keyframes shake {
+
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(-5px);
+    }
+
+    75% {
+        transform: translateX(5px);
+    }
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+    .container {
+        padding: 1rem;
+    }
+
+    .form-card {
+        padding: 1.5rem;
+    }
+}
+
+.error-shake {
+    animation: shake 0.4s ease-in-out;
+}

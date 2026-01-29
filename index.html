@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Registration</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="background-animation"></div>
+    <div class="container">
+        <div class="form-card">
+            <header>
+                <h1>Create Account</h1>
+                <p>Join us for an exclusive experience</p>
+            </header>
+            
+            <form id="registrationForm" novalidate>
+                <div class="input-group">
+                    <label for="username">Full Name</label>
+                    <div class="input-wrapper">
+                        <i class="fa-regular fa-user input-icon"></i>
+                        <input type="text" id="username" name="username" placeholder="e.g. John Doe" autocomplete="name">
+                        <i class="fa-solid fa-circle-check success-icon"></i>
+                        <i class="fa-solid fa-circle-exclamation error-icon"></i>
+                    </div>
+                    <small class="error-message" id="usernameError"></small>
+                </div>
+
+                <div class="input-group">
+                    <label for="email">Email Address</label>
+                    <div class="input-wrapper">
+                        <i class="fa-regular fa-envelope input-icon"></i>
+                        <input type="email" id="email" name="email" placeholder="john@example.com" autocomplete="email">
+                        <i class="fa-solid fa-circle-check success-icon"></i>
+                        <i class="fa-solid fa-circle-exclamation error-icon"></i>
+                    </div>
+                    <small class="error-message" id="emailError"></small>
+                </div>
+
+                <div class="input-group">
+                    <label for="password">Password</label>
+                    <div class="input-wrapper">
+                        <i class="fa-solid fa-lock input-icon"></i>
+                        <input type="password" id="password" name="password" placeholder="At least 8 chars, 1 number, 1 special char" autocomplete="new-password">
+                        <i class="fa-solid fa-eye toggle-password" id="togglePassword"></i>
+                    </div>
+                    <small class="error-message" id="passwordError"></small>
+                    <div class="password-strength">
+                        <div class="strength-bar"></div>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label for="confirmPassword">Confirm Password</label>
+                    <div class="input-wrapper">
+                        <i class="fa-solid fa-lock input-icon"></i>
+                        <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Repeat your password" autocomplete="new-password">
+                        <i class="fa-solid fa-circle-check success-icon"></i>
+                        <i class="fa-solid fa-circle-exclamation error-icon"></i>
+                    </div>
+                    <small class="error-message" id="confirmPasswordError"></small>
+                </div>
+
+                <button type="submit" id="submitBtn">
+                    <span>Create Account</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+                
+                <p class="login-link">Already have an account? <a href="#">Log in</a></p>
+            </form>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
